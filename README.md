@@ -1,2 +1,2 @@
-# upiicsa-knowledge
-Una repo con todo el material y ejercicios que he considerado necesario para mi carrera en la escuela.
+# dev-knowledge
+A repository created with the objetive of give some knowledge tht i got to others developers and students.
