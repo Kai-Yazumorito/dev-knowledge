@@ -6,7 +6,9 @@
 #include <time.h>
 #include <locale.h>
 using namespace std;
-int main(){
-    system("pause");
-    printf("Hola mundo");
+
+
+int main() {
+    system("pause");        //  To pause the program.
+    printf("Hola mundo");   //  To show a message on the screen.
     }

@@ -18,7 +18,7 @@ using namespace std;
 
 //  Prototypes
     void capture();
-    void print();
+    void find();
     void searcher();
 
 
@@ -26,6 +26,7 @@ using namespace std;
     void searcher() {
         cout<<"\nType the number to search: ";
             cin>>number;
+
                 for (i=0;i<n;i++) {
                     if (number==hufflepuff[i]) {
                         cout<<"\nThe number "<<number<<" was find on the spot "<<i<<".";
@@ -42,7 +43,7 @@ using namespace std;
 //  Main function
     int main() {
         capture();
-        print();
+        printer();
         searcher();
         system("pause");
     }
@@ -58,7 +59,7 @@ using namespace std;
 
 
 //  Data printer
-    void print() {
+    void printer() {
         cout<<"\nThe saved data is: \n";
         for(i=0; i<n; i++){
             cout<<hufflepuff[i]<<" ";

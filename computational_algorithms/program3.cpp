@@ -7,31 +7,36 @@
 #include <locale.h>
 using namespace std;
 
+
   //  printf("\nHola mundo\n");
   
-  // Variables globales
+
+  // Global variables
   int i=0, j=0, k=0;
   int n=10;
-  int arreglo[10]={0};
+  int hufflepuff[10]={0};
 
-  //Captura de datos
-  void captura(){
-  cout<<"\nTeclee 10 numeros separados por un esacio \n";
-  for (i=0; i<n;i++){
-    cin>>arreglo [i];
+
+  //  Data capture
+  void capture() {
+  cout<<"\nWrite 10 numbers separated with a space.\n";
+  for (i=0; i<n;i++) {
+    cin>>hufflepuff[i];
   }
   }
-  //Impresion de datos
-  void impresion(){
-  	cout<<"\nLos datos guardados son: \n";
-  for(i=0; i<n; i++){
-    cout<<arreglo [i]<<" ";
+
+  
+  //  Data print
+  void print(){
+  	cout<<"\nThe saved data is: \n";
+  for(i=0; i<n; i++) {
+    cout<<hufflepuff[i]<<" ";
   }
   }
   
   int main(){
-  	captura();
-  	impresion();
+  	capture();
+  	print();
     system("pause");
     }
 

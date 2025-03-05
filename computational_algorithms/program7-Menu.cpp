@@ -26,7 +26,7 @@ int bdata=0;
 
 //  Prototypes
 void capture();
-void print();
+void printer();
 void finder();
 void bubblem2M();
 void bubbleM2m();
@@ -36,7 +36,7 @@ int menu();
 //  Data searcher
 void finder() {
     cout<<"\nWriter de number you want to search: ";
-        cin>>number;
+    cin>>number;
     for(i=0;i<n;i++) {
         if(number==hufflepuff[i]) {
             cout<<"\nThe character "<<number<<" was find on the space "<<i<<".";
@@ -63,7 +63,7 @@ void bubblem2M() {
         }
     }
     //cout<<"i value is: "<<i<<endl;
-    print();
+    printer();
     //return (0);
     cout<<"\nThe data was ordered from minor to Major.\n"<<endl;;
 }
@@ -81,20 +81,19 @@ void bubbleM2m() {
         }
     }
     //cout<<"i value is: "<<i<<endl;
-    print();
+    printer();
     //return (0);
     cout<<"\nThe data was ordered from Major to minor.\n"<<endl;
 }
 
 
-//  Main Source
+//  Main function
 int main() {
     setlocale(LC_ALL, "spanish");
     capture();
-    print();
+    printer();
     // system("pause");
     menu();
-
     switch(option) {
         case (1):
             finder();
@@ -114,6 +113,8 @@ int main() {
     return (0);
 }
 
+
+//  Menu function
 int menu() {
     // system("cls");
     cout<<"\nMenu"<<endl;
@@ -121,7 +122,7 @@ int menu() {
     cout<<"2 - Bubble order: minor 2 Major"<<endl;
     cout<<"3 - Bubble order: Major 2 minor"<<endl;
     cout<<"Write the number of the option that u prefer.\n";
-        cin>>option;
+    cin>>option;
     cout<<"The selected option is: "<<option<<endl;
     return (0);
 }
@@ -131,13 +132,13 @@ int menu() {
 void capture() {
     cout<<"\nWrite "<<n<<" numbers separated by spaces.\n";
     for (i=0;i<n;i++) {
-        cin>>hufflepuff[i];
+    cin>>hufflepuff[i];
     }
 }
 
 
 //  Data printer
-void print() {
+void printer() {
     cout<<"\nThe data is: \n";
     for (k=0;k<n;k++) {
         cout<<hufflepuff[k]<<" ";
