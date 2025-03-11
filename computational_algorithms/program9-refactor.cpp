@@ -18,6 +18,7 @@ int n=5;
 int number=0;
 int option=0;
 int hufflepuff[5]={0};
+int gryffindor[n]={0};  // Variable array
 
 
 //  Flags
@@ -27,6 +28,7 @@ int bmenu=0;    //  Menu return flag counter
 
 
 //  Prototypes
+int filereader();
 void capture();
 void printer();
 void finder();
@@ -92,39 +94,36 @@ void bubbleM2m() {
 //  Main function
 int main() {
     setlocale(LC_ALL, "spanish");
-    capture();
-    printer();
-    // system("pause");
-    do {
+    for(ciclo=0;ciclo==0; ) {
         menu();
-        while (option<1||option>3) {
-            cout<<"Invalid option. Please enter a valid option.\n";
-            menu();
-        }
         switch(option) {
             case (1):   //  Data searcher
-                finder();
+                capture();
             break;
             case(2):    //  Bubble order: minor 2 Major
                 bubblem2M();
             break;
             case(3):    //  Bubble order: Major 2 minor
+                printer();
+            break;
+            case (4):   //  Data searcher
+                finder();
+            break;
+            case(5):    //  Bubble order: minor 2 Major
+                bubblem2M();
+            break;
+            case(6):    //  Bubble order: Major 2 minor
                 bubbleM2m();
+            break;
+            case(7):    //  Bubble order: minor 2 Major
+                bubblem2M();
             break;
         }
         cout<<"Do you want to return to the menu?\n";   //  Menu return
         cout<<"1 - Yes\n";
         cout<<"0 - No\n";
         cin>>bmenu;
-        while (bmenu!=0 && bmenu!=1) {
-            cout<<"Invalidad option. Please enter 1 to returno or 0 to exit.\n";
-            cin>>bmenu;
-        }
-    } while (bmenu==1);
-    cout<<endl;
-    cout<<"Program finished.\n";
-    system("pause");
-    return (0);
+    }
 }
 
 
