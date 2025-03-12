@@ -24,6 +24,10 @@ int main() {
     int cycle=0;
 
 
+    cout<<"2/4= "<<2/4<<endl;
+    // 0
+    cout<<"4/2= "<<4/2<<endl;
+    // 2
     // Array declaration
     int gryffindor[n]={};
 
@@ -77,12 +81,12 @@ int main() {
             cin>>n;
             cout<<"OK, I've register the number of elements you want to substract."<<endl;
             cout<<"Now, type the numbers you want to substract."<<endl;
-            for (i=0;i=n;i++) {
+            for (i=0;i<n;i++) {
                 cout<<"Type the number "<<(i+1)<<": ";
                 cin>>gryffindor[i];
             }
             cout<<"I'm going to substract the numbers you typed."<<endl;
-            for (i=0;i=n;i++) {
+            for (i=0;i<n;i++) {
                 cout<<gryffindor[i]<<"-";
                 minus=minus-gryffindor[i];
             }
@@ -138,11 +142,11 @@ int main() {
             cout<<"I'm going to divide the numbers you typed."<<endl;
             for (l=0;l<n;l++) {
                 cout<<gryffindor[l]<<"/";
-                if (l==0&&div!=0) {
+//                if (l==0&&div!=0) {
                     div=gryffindor[0]/gryffindor[l];
-                }else{
-                    div=div/gryffindor[l];
-                }
+//                }else{
+//                    div=div/gryffindor[l];
+//                }
             }
             cout<<"= "<<div<<endl;
             cout<<"Do you want to do another operation? (0=Yes, 1=No): ";
