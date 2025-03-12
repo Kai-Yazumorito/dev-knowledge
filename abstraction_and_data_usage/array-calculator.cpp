@@ -9,6 +9,7 @@ using namespace std;
 
 // Main function
 int main() {
+
     // Variables
     int i=0;   // Counter variable (sum)
     int j=1;   // Counter variable (substract)
@@ -23,13 +24,15 @@ int main() {
     int mod=0;   // Modulus of the array elements
     int cycle=0;
 
-
-    cout<<"2/4= "<<2/4<<endl;
-    // 0
-    cout<<"4/2= "<<4/2<<endl;
-    // 2
+    
     // Array declaration
     int gryffindor[n]={};
+
+
+//    cout<<"2/4= "<<2/4<<endl;
+    // 0
+//    cout<<"4/2= "<<4/2<<endl;
+    // 2
 
     // Instruccion for the user. u can change it if u want.
     cout<<"This is gonna be a basci calculator program."<<endl;
@@ -51,6 +54,8 @@ int main() {
 
         
         switch(option) {
+
+
             // Sum operation
             case (1):
             cout<<"You selected the sum operation."<<endl;
@@ -74,6 +79,7 @@ int main() {
             cin>>cycle;
             break;
 
+
             // Substraction operation
             case (2):
             cout<<"You selected the substraction operation."<<endl;
@@ -94,6 +100,7 @@ int main() {
             cout<<"Do you want to do another operation? (0=Yes, 1=No): ";
             cin>>cycle;
             break;
+
 
             // Multiply operation
             case (3):
@@ -119,7 +126,6 @@ int main() {
             cout<<"= "<<mult<<endl;
             cout<<"Do you want to do another operation? (0=Yes, 1=No): ";
             cin>>cycle;
-
             // Data Check
 //            for (k=0;k<n;k++) {
 //                cout<<"The register number on"<<gryffindor[k]<<"is: "<<endl;
@@ -127,6 +133,7 @@ int main() {
 //            }
             // This only for verify a bug in the code, it can be erased.
             break;
+
 
             // Division operation
             case (4):
