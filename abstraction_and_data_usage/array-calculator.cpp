@@ -18,8 +18,8 @@ int main() {
     int option=0;   // User option
     int sum=0;   // Sum of the array elements
     int minus=0;   // Substraction of the array elements
-    int mult=1;   // Multiplication of the array elements
-    int div=1;   // Division of the array elements
+    int mult=0;   // Multiplication of the array elements
+    int div=0;   // Division of the array elements
     int mod=0;   // Modulus of the array elements
     int cycle=0;
 
@@ -106,7 +106,7 @@ int main() {
             cout<<"I'm going to multiply the numbers you typed."<<endl;
             for (k=0;k<n;k++) {
                 cout<<gryffindor[k]<<"*";
-                if (k==0) {
+                if (k==0&&mult!=0) {
                     mult=gryffindor[0]*gryffindor[k];
                 }else{
                     mult=mult*gryffindor[k];
@@ -121,6 +121,7 @@ int main() {
 //                cout<<"The register number on"<<gryffindor[k]<<"is: "<<endl;
 //                cout<<gryffindor[k]<<" ";
 //            }
+            // This only for verify a bug in the code, it can be erased.
             break;
 
             // Division operation
@@ -130,14 +131,18 @@ int main() {
             cin>>n;
             cout<<"OK, I've register the number of elements you want to divide."<<endl;
             cout<<"Now, type the numbers you want to divide."<<endl;
-            for (i=0;i<=n;i++) {
-                cout<<"Type the number "<<(i)<<": ";
-                cin>>gryffindor[i];
+            for (l=0;l<n;l++) {
+                cout<<"Type the number "<<(l+1)<<": ";
+                cin>>gryffindor[l];
             }
             cout<<"I'm going to divide the numbers you typed."<<endl;
-            for (i=0;i<=n;i++) {
-                cout<<gryffindor[i]<<"/";
-                div/=gryffindor[i];
+            for (l=0;l<n;l++) {
+                cout<<gryffindor[l]<<"/";
+                if (l==0&&div!=0) {
+                    div=gryffindor[0]/gryffindor[l];
+                }else{
+                    div=div/gryffindor[l];
+                }
             }
             cout<<"= "<<div<<endl;
             cout<<"Do you want to do another operation? (0=Yes, 1=No): ";
