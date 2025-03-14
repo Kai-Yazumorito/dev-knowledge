@@ -20,6 +20,8 @@ int main() {
     cin>>value;
     cout<<"\n";
 
+
+    // For with Switch apply saver.
     for(int i=1; i>=0; i--) {
         for(int j=0; j<10; j++) {
             multiply=value*(j+1);   // Multiply operation.
@@ -42,6 +44,8 @@ int main() {
 //        cout<<ravenclaw[i]<<" , ";      // Function verifier.
     }
 
+
+    // For with If apply resolution.
     for(int i=0; i<10; i++) {
 //        cout<<i<<" x "<<value<<" = "<<ravenclaw[i-1]<<"\n";   // Simple array printer.
         for(int j=0; j<2; j++) {
@@ -54,6 +58,10 @@ int main() {
             }
         }
     }
+    cout<<"\n";
+
+
+    // For with Switch appli resolution.
     for(int i=0; i<10; i++) {
         for(int j=0; j<2; j++) {
             switch(j) {
