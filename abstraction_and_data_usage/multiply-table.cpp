@@ -27,6 +27,6 @@ int main() {
     }
 
     for(int i=1; i<=10; i++) {
-        cout<<i<<" x "<<value<<" = "<<ravenclaw[i]<<"\n";
+        cout<<i<<" x "<<value<<" = "<<ravenclaw[i-1]<<"\n";
     }
 }
