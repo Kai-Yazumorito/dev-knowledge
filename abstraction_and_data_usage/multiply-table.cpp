@@ -30,6 +30,7 @@ int main() {
                     cout<<hufflepuff[j][i]<<" ";
                 break;
                 case 1:
+                    ravenclaw[j]=multiply;
                     hufflepuff[j][i]=multiply;
                     cout<<hufflepuff[j][i]<<" ";
                 break;
@@ -42,12 +43,29 @@ int main() {
     }
 
     for(int i=0; i<10; i++) {
-//        cout<<i<<" x "<<value<<" = "<<ravenclaw[i-1]<<"\n";   // 2D array printer.
+//        cout<<i<<" x "<<value<<" = "<<ravenclaw[i-1]<<"\n";   // Simple array printer.
         for(int j=0; j<2; j++) {
             if(j==0) {
                 cout<<value<<" x "<<hufflepuff[i][j]<<" = ";
             } else {
                 cout<<hufflepuff[i][j]<<"\n";
+//                cout<<ravenclaw[j]<<"\n";     // You can change it instead of the upper apply,
+                                                // just preferences if with the 2D or Simple.
+            }
+        }
+    }
+    for(int i=0; i<10; i++) {
+        for(int j=0; j<2; j++) {
+            switch(j) {
+                case 0:
+                    cout<<value<<" x "<<hufflepuff[i][j]<<" = ";
+                break;
+                case 1:
+//                cout<<hufflepuff[i][j]<<"\n";     // You can change it instead of the
+                                                    // down apply, just preferences if
+                                                    // with the 2D or Simple.
+                cout<<ravenclaw[i]<<"\n";
+                break;
             }
         }
     }
