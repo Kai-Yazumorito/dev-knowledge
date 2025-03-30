@@ -21,6 +21,7 @@ char rep;
 //Banderas
 int bfinder=0;
 int bdata=0;
+int bmenu=0;
 
 
 //Prototipos
@@ -102,7 +103,7 @@ int bdata=0;
 //Principal Function
  int main(){
     setlocale (LC_ALL, "spanish");
-    for(cycle=0;cycle==0; ) {
+    for(bmenu=0;bmenu==0; ) {
         menu();
         switch(option) {
             case (1):
@@ -111,11 +112,28 @@ int bdata=0;
             case(2):
                 Bubblem2M();
             break;
+            case(3):
+                printer();
+            break;
             case(4):
+                SecSearcher();
+            break;
+            case(5):
+                Bubblem2M();
+            break;
+            case(6):
                 BubbleM2m();
             break;
+            case(7):
+                Bubblem2M();
+            break;
         }
+        cout<<"\n\nDesea continuar? (s/n) \n";
+        cout<<"1 - Si \n";
+        cout<<"2 - No \n";
+        cin>>rep;
     }
+ }
  
  int menu(){
  system ("cls");	
