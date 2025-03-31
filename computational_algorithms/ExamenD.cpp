@@ -18,7 +18,7 @@ int number=0;
 int counter=0;
 int cn=0;
 int place=0;
-int guardacn=0;
+int savecn=0;
 int hufflepuff[1000]={0};
 int numDup=0;
 int pSum=0;
@@ -29,6 +29,7 @@ int pResult=0;
 int bfind=0;        // Finder beacon
 int bdata=0;        // Data beacon
 int bordenation=0;  // Order beacon
+
 
 //File Management
 string nombreArchivoE;
@@ -69,7 +70,7 @@ int capture(){
 }
 
 
-//Archive Reader - (Option 2)
+//File Reader - (Option 2)
 int archivo(){
 	FILE *archivo1;                                  //Create a pointer of file using the funtion fopen, the pointer has asigned the file call
 	cout<<"\n Teclea el nombre del archivo de entrada (sin espacio, ni caracteres especiales):   ";
@@ -256,14 +257,14 @@ int guardarArchivo(){
 		cout<<"\n Se abrio el archivo  "<<nombreArchivoS.c_str()<<"  correctamente\n";
    }
  cout<<"\n\nGuarda los numeros contenidos en el arreglo en archivo";
-  guardacn=0;
+  savecn=0;
   for (i=0; i<n; i++) {
       salida.valor=hufflepuff[i];
       fprintf(archivo2, "%i\n", salida.valor);
-      guardacn++;
+      savecn++;
    }
 
-  cout<<"\n\nTotal de números guardados en el segundo archivo son: "<<guardacn;
+  cout<<"\n\nTotal de números guardados en el segundo archivo son: "<<savecn;
   cout<<"\n\n";
 	fclose(archivo2);
 	
