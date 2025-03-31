@@ -115,7 +115,7 @@ int printer(){
 
 
 //Value Searcher using Sequential Search - (Option 4)
- int SecSearcher(){
+int SecSearcher(){
     cout<<"\nType the numbers to search \n";
     cin>>number;
     for(i=0;i<=n;i++){
@@ -131,7 +131,6 @@ int printer(){
     system("pause");
     return(0);
  }
-
 
 
 //Duplicate Number Searcher - (Option 5)
@@ -159,7 +158,7 @@ int DoppleSearcher(){
 
 
 //Bubble Sort Major to Minor - (Option 6)
- int Bubblem2M(){
+int Bubblem2M(){
     for(i=0; i<n-1; i++){
         for (j=i+1;j<n;j++){
             if (hufflepuff[i] > hufflepuff[j]){
@@ -176,7 +175,7 @@ int DoppleSearcher(){
 
 
 //Bubble Sort Minor to Major - (Option 7)
-  int BubbleM2m(){
+int BubbleM2m(){
     for(i=0; i<n-1; i++){
         for (j=i+1;j<n;j++){
             if (hufflepuff[i] < hufflepuff[j]){
@@ -190,6 +189,7 @@ int DoppleSearcher(){
     border=1;
     return(0);
  }
+
 
 //Duplicate a number - (Option 8)
 int duplicateNum(){
