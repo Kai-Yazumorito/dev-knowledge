@@ -21,8 +21,8 @@ int place=0;
 int savecn=0;
 int hufflepuff[1000]={0};
 int numDup=0;
-int eSum=0;
-int eResult=0;
+int oSum=0;
+int oResult=0;
 
 
 //Flags
@@ -55,7 +55,7 @@ int DoppleSearcher();
 int BubbleM2m();
 int Bubblem2M();
 int duplicateNum();
-int evenSum();
+int oddSum();
 int SaveFile();
 
 
@@ -223,15 +223,15 @@ int duplicateNum(){
 }
 
 //Odd Numbers Sum - (Option 9)
-int evenSum(){
+int oddSum(){
     for(i=0;i<n;i++){
-        eResult=hufflepuff[i]%2;
-        if(eResult==1){
+        oResult=hufflepuff[i]%2;
+        if(oResult==1){
             cout<<"\n"<<hufflepuff[i]<<" is an odd number.\n";
-            eSum=eSum+hufflepuff[i];
+            oSum=oSum+hufflepuff[i];
         }
     }
-    cout<<"\nThe sum of the odd numbers is: "<<eSum;
+    cout<<"\nThe sum of the odd numbers is: "<<oSum;
     return(0);
 }
 
@@ -295,7 +295,7 @@ int SaveFile(){
                 duplicateNum();
             break;
             case(9):
-                evenSum();
+                oddSum();
             break;
             case(10):
                 SaveFile();
@@ -323,7 +323,7 @@ cout<<"\n5 Duplicate Number Searcher";
 cout<<"\n6 Bubble Sort Major to Minor";
 cout<<"\n7 Bubble Sort Minor to Major";
 cout<<"\n8 Duplicate a number";
-cout<<"\n9 Even Numbers Sum";
+cout<<"\n9 Odd Numbers Sum";
 cout<<"\n10 Save data to file";
 cout<<"\n11 Exit";
 cout<<"\nType the number of the option you want to select:\n";

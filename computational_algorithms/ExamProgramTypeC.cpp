@@ -21,14 +21,15 @@ int place=0;
 int savecn=0;
 int hufflepuff[1000]={0};
 int numDup=0;
-int eSum=0;
-int eResult=0;
+int Sum=0;
+int Result=0;
 
 
 //Flags
 int bfind=0;  // Finder beacon
 int bdata=0;    // Data beacon
 int border=0;    // Order beacon
+int beven=0;   // Even beacon
 
 
 //File Managment
@@ -55,7 +56,7 @@ int DoppleSearcher();
 int BubbleM2m();
 int Bubblem2M();
 int duplicateNum();
-int evenSum();
+int SecSum();
 int SaveFile();
 
 
@@ -222,17 +223,31 @@ int duplicateNum(){
         return(0);
 }
 
-//Odd Numbers Sum - (Option 9)
-int evenSum(){
+//Even Numbers Sum and Identifier - (Option 9)
+int SecSum(){
+    Sum=0;
+    beven=0;
     for(i=0;i<n;i++){
-        eResult=hufflepuff[i]%2;
-        if(eResult==1){
-            cout<<"\n"<<hufflepuff[i]<<" is an odd number.\n";
-            eSum=eSum+hufflepuff[i];
+        if(hufflepuff[i]==2){
+            beven=1;
+        }else{
+            if(hufflepuff[i]==3){
+                beven=1;
+            }else{
+                if(hufflepuff[i]==5){
+                    beven=1;
+                }else{
+                    if(hufflepuff[i]==7){
+                        beven=1;
+                    }
+                }
+            }
+        }
+        if(beven=1){
+            cout<<"\nThe number is even.";
+            Sum=Sum+hufflepuff[i];
         }
     }
-    cout<<"\nThe sum of the odd numbers is: "<<eSum;
-    return(0);
 }
 
 
@@ -295,7 +310,7 @@ int SaveFile(){
                 duplicateNum();
             break;
             case(9):
-                evenSum();
+                SecSum();
             break;
             case(10):
                 SaveFile();
@@ -323,7 +338,7 @@ cout<<"\n5 Duplicate Number Searcher";
 cout<<"\n6 Bubble Sort Major to Minor";
 cout<<"\n7 Bubble Sort Minor to Major";
 cout<<"\n8 Duplicate a number";
-cout<<"\n9 Even Numbers Sum";
+cout<<"\n9 Even Numbers Sum and Identifier";
 cout<<"\n10 Save data to file";
 cout<<"\n11 Exit";
 cout<<"\nType the number of the option you want to select:\n";
