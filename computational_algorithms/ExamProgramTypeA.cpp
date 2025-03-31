@@ -21,8 +21,8 @@ int place=0;
 int savecn=0;
 int hufflepuff[1000]={0};
 int numDup=0;
-int pSum=0;
-int pResult=0;
+int eSum=0;
+int eResult=0;
 
 
 //Flags
@@ -55,7 +55,7 @@ int DoppleSearcher();
 int BubbleM2m();
 int Bubblem2M();
 int duplicateNum();
-int Average();
+int evenSum();
 int SaveFile();
 
 
@@ -222,7 +222,18 @@ int duplicateNum(){
         return(0);
 }
 
-//Variable Option - (Option 9)
+//Even Numbers Sum - (Option 9)
+int evenSum(){
+    for(i=0;i<n;i++){
+        eResult=hufflepuff[i]%2;
+        if(eResult==0){
+            cout<<"\n"<<hufflepuff[i]<<" is a even number.";
+            eSum=eSum+hufflepuff[i];
+        }
+    }
+    cout<<"\nThe sum of the even numbers is: "<<eSum;
+    return(0);
+}
 
 
 //Copy the data to a file - (Option 10)
