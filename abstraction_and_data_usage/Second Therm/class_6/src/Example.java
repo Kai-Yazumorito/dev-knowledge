@@ -26,6 +26,28 @@ public class Example {
         height=inputData.nextDouble();
         personal.setHeight(height);
 
+        Person dataPersonal=new Person(name, last_name, age, height);
+
+        System.out.println("Type the Student ID: ");
+        String studentID=inputData.next();
+
+        System.out.println("Type your major : ");
+        String major=inputData.next();
+
+        System.out.println("Type your GPA: ");
+        double gpa=inputData.nextDouble();
+
+        Student student=new Student(dataPersonal, studentID, major, gpa);
+
+        student.greet();
+        student.showStudentInfo();
+
+        if(student.isRegular()) {
+            System.out.println("Status: Regular student.");
+        } else {
+            System.out.println("Status: Irregular student.");
+        }
+
         System.out.println("The name of the person is: "+personal.showName());
     }
 }
