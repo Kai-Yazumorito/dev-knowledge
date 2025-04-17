@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Example {
     public static void main(String[] args) {
         Person personal=new Person();
+        @SuppressWarnings("resource")
         Scanner inputData=new Scanner(System.in);
 
         String name, last_name;
