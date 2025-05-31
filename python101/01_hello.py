@@ -22,7 +22,7 @@ lista.append(2)
 print(lista.count(2))
 
 
-lista.insert(0, num)
+lista.insert(0, "num")
 # inser es para agregar datos a un array pero de manera manual por lo que se debe de dar la posición.
 print(lista)
 
